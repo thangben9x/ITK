@@ -53,7 +53,7 @@ namespace IT_Kho
 
                 //biểu đồ tổng nhập kho
                 chart2.DataSource = Connect.getTable(sql1);
-                chart2.ChartAreas["ChartArea1"].AxisY.Title = "Tổng Số Lượng Xuất";
+                chart2.ChartAreas["ChartArea1"].AxisY.Title = "Tổng Số Lượng Nhập";
                 chart2.ChartAreas["ChartArea1"].AxisX.Title = "Mã Model";
 
                 chart2.Series["Tổng Nhập Kho"].XValueMember = "MaVT";
@@ -74,6 +74,10 @@ namespace IT_Kho
             lookUpEdit1.Properties.DataSource = Connect.getTable(sql);
             lookUpEdit1.Properties.DisplayMember = "tenphong";
             lookUpEdit1.Properties.ValueMember = "maphong";
+            timer1.Start();
+            barStaticItem1.Caption = DateTime.Now.ToLongTimeString();
+            barStaticItem2.Caption = DateTime.Now.ToLongDateString();
+
         }
 
         private void lookUpEdit1_EditValueChanged(object sender, EventArgs e)
@@ -169,6 +173,13 @@ namespace IT_Kho
                 NVTCC.Instance.BringToFront();
             }
             NVTCC.Instance.BringToFront();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            barStaticItem1.Caption = DateTime.Now.ToLongTimeString();
+            barStaticItem2.Caption = DateTime.Now.ToLongDateString();
+            timer1.Start();
         }
     }
 }
