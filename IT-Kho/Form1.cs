@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraBars;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,9 +40,36 @@ namespace IT_Kho
             Xuatkho.Instance.BringToFront();
         }
 
+        private void hien()
+        {
+            try
+            {
+                string sql1 = "select MaVT, TenVT, dvt, Sum(Nhap) as tongnhhap , SUM(Xuat) as tongxuat, (SUM(Nhap) - SUM(Xuat)) as Ton from (select model as MaVT, tensp as TenVT, dvt as dvt, 0 as Nhap, 0 as Xuat From VatTu union Select N.model as MaVT, H.tensp as TenVT, H.dvt as dvt, Sum(N.slnhap) as Nhap, 0 as Xuat  From Nhap N, VatTu H Where N.model = H.model  Group By N.model, H.tensp, H.dvt having SUM(N.slnhap) > 0 union Select X.model as MaVT, H.tensp as TenVT, H.dvt as dvt, 0 as Nhap, Sum(X.slxuat) as Xuat   From Xuat X, VatTu H Where X.model = H.model Group By X.model, H.tensp, H.dvt having SUM(X.slxuat) > 0 ) as hangton Group by MaVT, TenVT, dvt";
+                chart1.DataSource = Connect.getTable(sql1);
+                chart1.ChartAreas["ChartArea1"].AxisY.Title = "Tổng Số Lượng Xuất";
+                chart1.ChartAreas["ChartArea1"].AxisX.Title = "Mã Model";
+                chart1.Series["Tổng Xuất Kho"].XValueMember = "MaVT";
+                chart1.Series["Tổng Xuất Kho"].YValueMembers = "tongxuat";
+
+                //biểu đồ tổng nhập kho
+                chart2.DataSource = Connect.getTable(sql1);
+                chart2.ChartAreas["ChartArea1"].AxisY.Title = "Tổng Số Lượng Xuất";
+                chart2.ChartAreas["ChartArea1"].AxisX.Title = "Mã Model";
+
+                chart2.Series["Tổng Nhập Kho"].XValueMember = "MaVT";
+                chart2.Series["Tổng Nhập Kho"].YValueMembers = "tongnhhap";
+            }
+            catch
+            {
+                XtraMessageBox.Show("Không thể kết nối tới CSDL", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+        }
         public static string mp = "";
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            hien();
             string sql = "select *from  PhongBan";
             lookUpEdit1.Properties.DataSource = Connect.getTable(sql);
             lookUpEdit1.Properties.DisplayMember = "tenphong";

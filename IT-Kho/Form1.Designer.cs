@@ -28,11 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -43,22 +52,26 @@
             this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement7 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.accordionControlElement8 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement9 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement10 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
             this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
             this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            this.container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.accordionControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // repositoryItemTextEdit1
@@ -84,6 +97,8 @@
             // 
             // container
             // 
+            this.container.Controls.Add(this.chart2);
+            this.container.Controls.Add(this.chart1);
             this.container.Cursor = System.Windows.Forms.Cursors.Default;
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(197, 31);
@@ -91,6 +106,28 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(1113, 639);
             this.container.TabIndex = 0;
+            // 
+            // chart1
+            // 
+            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(79, 23);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Tổng Xuất Kho";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(944, 265);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title2.Name = "Tổng Xuất Kho";
+            this.chart1.Titles.Add(title2);
             // 
             // accordionControl1
             // 
@@ -142,6 +179,7 @@
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement2,
             this.accordionControlElement3});
+            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "TỒN KHO IT";
             // 
@@ -186,6 +224,28 @@
             this.accordionControlElement17.Text = "Thu Hồi";
             this.accordionControlElement17.Click += new System.EventHandler(this.accordionControlElement17_Click);
             // 
+            // accordionControlElement8
+            // 
+            this.accordionControlElement8.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement9,
+            this.accordionControlElement10});
+            this.accordionControlElement8.Name = "accordionControlElement8";
+            this.accordionControlElement8.Text = "QUẢN LÝ ";
+            // 
+            // accordionControlElement9
+            // 
+            this.accordionControlElement9.Name = "accordionControlElement9";
+            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement9.Text = "Vât Tư";
+            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
+            // 
+            // accordionControlElement10
+            // 
+            this.accordionControlElement10.Name = "accordionControlElement10";
+            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement10.Text = "Tài Khoản";
+            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -227,29 +287,6 @@
             this.barButtonItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
-            // accordionControlElement8
-            // 
-            this.accordionControlElement8.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement9,
-            this.accordionControlElement10});
-            this.accordionControlElement8.Expanded = true;
-            this.accordionControlElement8.Name = "accordionControlElement8";
-            this.accordionControlElement8.Text = "QUẢN LÝ ";
-            // 
-            // accordionControlElement9
-            // 
-            this.accordionControlElement9.Name = "accordionControlElement9";
-            this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement9.Text = "Vât Tư";
-            this.accordionControlElement9.Click += new System.EventHandler(this.accordionControlElement9_Click);
-            // 
-            // accordionControlElement10
-            // 
-            this.accordionControlElement10.Name = "accordionControlElement10";
-            this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement10.Text = "Tài Khoản";
-            this.accordionControlElement10.Click += new System.EventHandler(this.accordionControlElement10_Click);
-            // 
             // barSubItem1
             // 
             this.barSubItem1.Caption = "Nhập Thiết Bị";
@@ -277,6 +314,28 @@
             this.barLargeButtonItem2.Name = "barLargeButtonItem2";
             this.barLargeButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem2_ItemClick);
             // 
+            // chart2
+            // 
+            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
+            this.chart2.Location = new System.Drawing.Point(79, 318);
+            this.chart2.Name = "chart2";
+            this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Tổng Nhập Kho";
+            this.chart2.Series.Add(series1);
+            this.chart2.Size = new System.Drawing.Size(944, 265);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
+            title1.Name = "Tổng Xuất Kho";
+            this.chart2.Titles.Add(title1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,10 +356,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            this.container.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.accordionControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,6 +391,8 @@
         private DevExpress.XtraBars.BarSubItem barSubItem1;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
         private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
     }
 }
 
