@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -36,16 +37,14 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
@@ -70,15 +69,12 @@
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.barStaticItem2 = new DevExpress.XtraBars.BarStaticItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
             this.container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
-            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.accordionControl1.SuspendLayout();
@@ -109,8 +105,12 @@
             // 
             // container
             // 
-            this.container.Controls.Add(this.panelControl2);
-            this.container.Controls.Add(this.panelControl1);
+            this.container.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.container.Appearance.Options.UseBackColor = true;
+            this.container.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("container.BackgroundImage")));
+            this.container.Controls.Add(this.labelControl1);
+            this.container.Controls.Add(this.chart2);
+            this.container.Controls.Add(this.chart1);
             this.container.Cursor = System.Windows.Forms.Cursors.Default;
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(197, 31);
@@ -119,37 +119,13 @@
             this.container.Size = new System.Drawing.Size(1113, 639);
             this.container.TabIndex = 0;
             // 
-            // panelControl2
-            // 
-            this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Controls.Add(this.chart2);
-            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl2.Location = new System.Drawing.Point(0, 261);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1113, 348);
-            this.panelControl2.TabIndex = 4;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(365, 284);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(374, 36);
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "Thống kê xuất nhập kho IT";
-            // 
             // chart2
             // 
-            this.chart2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea1.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(134, 39);
+            this.chart2.Location = new System.Drawing.Point(342, 29);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
@@ -158,40 +134,36 @@
             series1.Name = "Tổng Nhập Kho";
             series1.YValuesPerPoint = 2;
             this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(845, 206);
-            this.chart2.TabIndex = 3;
+            this.chart2.Size = new System.Drawing.Size(398, 206);
+            this.chart2.TabIndex = 7;
             this.chart2.Text = "chart2";
             title1.Name = "Tổng Xuất Kho";
             this.chart2.Titles.Add(title1);
             // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.chart1);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1113, 261);
-            this.panelControl1.TabIndex = 3;
-            // 
             // chart1
             // 
-            this.chart1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(134, 39);
+            this.chart1.Location = new System.Drawing.Point(115, 259);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Tổng Xuất Kho";
             series2.YValuesPerPoint = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Tồn Kho";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Tổng Nhập Kho";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(845, 203);
-            this.chart1.TabIndex = 1;
+            this.chart1.Series.Add(series3);
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(877, 234);
+            this.chart1.TabIndex = 5;
             this.chart1.Text = "chart1";
             title2.Name = "Tổng Xuất Kho";
             this.chart1.Titles.Add(title2);
@@ -215,7 +187,7 @@
             // 
             // lookUpEdit1
             // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(12, 104);
+            this.lookUpEdit1.Location = new System.Drawing.Point(12, 112);
             this.lookUpEdit1.Name = "lookUpEdit1";
             this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -470,6 +442,16 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(366, 563);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(374, 36);
+            this.labelControl1.TabIndex = 8;
+            this.labelControl1.Text = "Thống kê xuất nhập kho IT";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -492,12 +474,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
             this.container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
-            this.panelControl2.ResumeLayout(false);
-            this.panelControl2.PerformLayout();
+            this.container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.accordionControl1.ResumeLayout(false);
@@ -535,11 +513,9 @@
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem2;
         private System.Windows.Forms.Timer timer1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
 
