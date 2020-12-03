@@ -28,6 +28,13 @@ namespace IT_Kho
             {
                 string sql = "select MaVT, TenVT, dvt, Sum(Nhap) as tongnhhap , SUM(Xuat) as tongxuat, (SUM(Nhap) - SUM(Xuat)) as Ton from (select model as MaVT, tensp as TenVT, dvt as dvt, 0 as Nhap, 0 as Xuat From VatTu union Select N.model as MaVT, H.tensp as TenVT, H.dvt as dvt, Sum(N.slnhap) as Nhap, 0 as Xuat  From Nhap N, VatTu H Where N.model = H.model  Group By N.model, H.tensp, H.dvt having SUM(N.slnhap) > 0 union Select X.model as MaVT, H.tensp as TenVT, H.dvt as dvt, 0 as Nhap, Sum(X.slxuat) as Xuat   From Xuat X, VatTu H Where X.model = H.model Group By X.model, H.tensp, H.dvt having SUM(X.slxuat) > 0 ) as hangton Group by MaVT, TenVT, dvt";
                 gridControl1.DataSource = Connect.getTable(sql);
+                chart1.DataSource = Connect.getTable(sql);
+                chart1.ChartAreas["ChartArea1"].AxisY.Title = "Tổng Số Lượng Nhập Xuất";
+                chart1.ChartAreas["ChartArea1"].AxisX.Title = "Mã Model";
+                chart1.Series["Tổng Xuất Kho"].XValueMember = "MaVT";
+                chart1.Series["Tổng Xuất Kho"].YValueMembers = "tongxuat";
+                chart1.Series["Tổng Nhập Kho"].YValueMembers = "tongnhhap";
+                chart1.Series["Tồn Kho"].YValueMembers = "Ton";
             }
             catch
             {

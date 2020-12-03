@@ -53,15 +53,6 @@ namespace IT_Kho
                 chart1.Series["Tổng Nhập Kho"].YValueMembers = "tongnhhap";
                 chart1.Series["Tồn Kho"].YValueMembers = "Ton";
 
-
-
-                //biểu đồ tổng nhập kho
-                chart2.DataSource = Connect.getTable(sql1);
-                chart2.ChartAreas["ChartArea1"].AxisY.Title = "Tổng Số Lượng Nhập";
-                chart2.ChartAreas["ChartArea1"].AxisX.Title = "Mã Model";
-
-                chart2.Series["Tổng Nhập Kho"].XValueMember = "MaVT";
-                chart2.Series["Tổng Nhập Kho"].YValueMembers = "tongnhhap";
             }
             catch
             {

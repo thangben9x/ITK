@@ -69,11 +69,11 @@
             this.layoutControl1.Controls.Add(this.ngaykt);
             this.layoutControl1.Controls.Add(this.ngaybd);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.layoutControl1.Location = new System.Drawing.Point(933, 0);
+            this.layoutControl1.Location = new System.Drawing.Point(1060, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(1270, 347, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(180, 639);
+            this.layoutControl1.Size = new System.Drawing.Size(180, 791);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -130,7 +130,7 @@
             this.layoutControlItem3,
             this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(180, 639);
+            this.Root.Size = new System.Drawing.Size(180, 791);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -138,7 +138,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 106);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(160, 513);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(160, 665);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem1
@@ -184,7 +184,7 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(933, 639);
+            this.gridControl1.Size = new System.Drawing.Size(1060, 791);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -343,7 +343,7 @@
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.layoutControl1);
             this.Name = "TonKi";
-            this.Size = new System.Drawing.Size(1113, 639);
+            this.Size = new System.Drawing.Size(1240, 791);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ngaykt.Properties.CalendarTimeProperties)).EndInit();
