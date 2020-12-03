@@ -164,7 +164,7 @@ namespace IT_Kho
                 XtraMessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập!!");
             }
         }
-
+        //CHức năng xóa Item
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)

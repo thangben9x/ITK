@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid.Drawing;
 
 namespace IT_Kho
 {
@@ -118,5 +120,92 @@ namespace IT_Kho
             }
         
          }
+
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                string manv = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "manv").ToString();
+                DialogResult tb = XtraMessageBox.Show("Bạn có chắc chắn muốn xoá không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (tb == DialogResult.Yes)
+                {
+                    GridView view = sender as GridView;
+                    view.DeleteRow(view.FocusedRowHandle);
+                    try
+                    {
+                        string delete = "delete from Nhap where sohd ='" + manv + "' ";
+                        Connect.Query(delete);
+                        hien();
+
+                    }
+                    catch
+                    {
+                        XtraMessageBox.Show("Lỗi! Hãy thử lại!");
+                        hien();
+                    }
+                }
+                else
+                {
+                    hien();
+                }
+            }
+        }
+        // tạo 1 biến
+        bool indicatorIcon = true;
+        // code hiển thị CODE STT 
+        private void gridView1_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
+        {
+            try
+            {
+                GridView view = (GridView)sender;
+                if (e.Info.IsRowIndicator && e.RowHandle >= 0)
+                {
+                    string sText = (e.RowHandle + 1).ToString();
+                    Graphics gr = e.Info.Graphics;
+                    gr.PageUnit = GraphicsUnit.Pixel;
+                    GridView gridView = ((GridView)sender);
+                    SizeF size = gr.MeasureString(sText, e.Info.Appearance.Font);
+                    int nNewSize = Convert.ToInt32(size.Width) + GridPainter.Indicator.ImageSize.Width + 10;
+                    if (gridView.IndicatorWidth < nNewSize)
+                    {
+                        gridView.IndicatorWidth = nNewSize;
+                    }
+
+                    e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                    e.Info.DisplayText = sText;
+                }
+                if (!indicatorIcon)
+                    e.Info.ImageIndex = -1;
+
+                if (e.RowHandle == GridControl.InvalidRowHandle)
+                {
+                    Graphics gr = e.Info.Graphics;
+                    gr.PageUnit = GraphicsUnit.Pixel;
+                    GridView gridView = ((GridView)sender);
+                    SizeF size = gr.MeasureString("STT", e.Info.Appearance.Font);
+                    int nNewSize = Convert.ToInt32(size.Width) + GridPainter.Indicator.ImageSize.Width + 10;
+                    if (gridView.IndicatorWidth < nNewSize)
+                    {
+                        gridView.IndicatorWidth = nNewSize;
+                    }
+
+                    e.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+                    e.Info.DisplayText = "STT";
+                }
+            }
+            catch
+            {
+                XtraMessageBox.Show("Lỗi cột STT");
+            }
+        }
+
+        private void gridView1_RowCountChanged(object sender, EventArgs e)
+        {
+            GridView gridview = ((GridView)sender);
+            if (!gridview.GridControl.IsHandleCreated) return;
+            Graphics gr = Graphics.FromHwnd(gridview.GridControl.Handle);
+            SizeF size = gr.MeasureString(gridview.RowCount.ToString(), gridview.PaintAppearance.Row.GetFont());
+            gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 10;
+        }
     }
 }

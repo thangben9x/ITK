@@ -161,7 +161,6 @@ namespace IT_Kho
             }
         }
         bool indicatorIcon = true;
-
         private void gridView1_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try
