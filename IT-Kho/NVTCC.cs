@@ -58,6 +58,7 @@ namespace IT_Kho
             repositoryItemLookUpEdit1.DataSource = Connect.getTable(sql1);
             repositoryItemLookUpEdit1.ValueMember = "manv";
             repositoryItemLookUpEdit1.DisplayMember = "tennv";
+            repositoryItemLookUpEdit1.NullText = @"Chọn người nhập";
         }
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)

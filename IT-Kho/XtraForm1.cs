@@ -65,7 +65,7 @@ namespace IT_Kho
                 string tenuser = gridView1.GetRowCellValue(e.RowHandle, "tenuser").ToString();
                 string chumay = gridView1.GetRowCellValue(e.RowHandle, "chumay").ToString();
                 string ghichu = gridView1.GetRowCellValue(e.RowHandle, "ghichu").ToString();
-                string maphong = gridView1.GetRowCellValue(e.RowHandle, "maphong").ToString();
+                string maphong = gridView1.GetRowCellValue(e.RowHandle, "maphong").ToString(); 
 
                 GridView view = sender as GridView;
                 //kiểm tra xem dòng đang chọn có phải dòng mới không nếu đúng thì insert không thì update
