@@ -24,6 +24,11 @@ namespace IT_Kho
         private void ThuHoi_Load(object sender, EventArgs e)
         {
             LoadData();
+            string sql1 = "select *from PhongBan";
+            repositoryItemLookUpEdit1.DataSource = Connect.getTable(sql1);
+            repositoryItemLookUpEdit1.ValueMember = "tenphong";
+            repositoryItemLookUpEdit1.DisplayMember = "maphong";
+            repositoryItemLookUpEdit1.NullText = @"Chọn phòng ban";
         }
         private static ThuHoi _instance;
 
@@ -207,6 +212,11 @@ namespace IT_Kho
             Graphics gr = Graphics.FromHwnd(gridview.GridControl.Handle);
             SizeF size = gr.MeasureString(gridview.RowCount.ToString(), gridview.PaintAppearance.Row.GetFont());
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 10;
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

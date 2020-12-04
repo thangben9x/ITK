@@ -39,6 +39,10 @@ namespace IT_Kho
         private void Fix_Update_Load(object sender, EventArgs e)
         {
             LoadData();
+            string sql1 = "select *from PhongBan";
+            repositoryItemLookUpEdit1.DataSource = Connect.getTable(sql1);
+            repositoryItemLookUpEdit1.ValueMember = "tenphong";
+            repositoryItemLookUpEdit1.DisplayMember = "maphong";
         }
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
