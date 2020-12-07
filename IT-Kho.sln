@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IT-Kho", "IT-Kho\IT-Kho.csp
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KHOIT", "KHOIT\KHOIT.vdproj", "{DD5217B7-1C7B-4BB5-9323-23C37B104ACA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KHOIT1", "KHOIT1\KHOIT1.vdproj", "{28BF7DED-2FC2-46CF-9C63-2D57B9CF85A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,8 @@ Global
 		{10864859-E65E-4064-BA02-D8DB248B4EA7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD5217B7-1C7B-4BB5-9323-23C37B104ACA}.Debug|Any CPU.ActiveCfg = Debug
 		{DD5217B7-1C7B-4BB5-9323-23C37B104ACA}.Release|Any CPU.ActiveCfg = Release
+		{28BF7DED-2FC2-46CF-9C63-2D57B9CF85A0}.Debug|Any CPU.ActiveCfg = Debug
+		{28BF7DED-2FC2-46CF-9C63-2D57B9CF85A0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -121,6 +121,17 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="editorButtonImageOptions1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAASxJREFUWEdj
+        GAWjgFQwrfis8dTSs++A+D8afgeSgyqjHGyZfSto89w7W4B4NwxvmHnrzOrJN/6snnTjP1YMlAOpQdYD
+        xCAzAqHGEg82z739CYj/Uwl/hBpLPMBiCEUYaixpYGrpuVVY4ppEfG4V1DjSwagDkB3Qln7ofzsQw/iT
+        i8/8b0jY+78xce//ySVn4OLo6qjmgNKQzWAM43dlHf1fAuSDMIiNSx3VHACzDMbH5QB0daMOGHXAqANG
+        HTDqgOHjgJqYnUC8C27whIKT/8vCtv4vD9sCZuNSR6EDzq5AGEQ2XgE1jnQwteRsNRYDScLTys5UQo0j
+        HcwtO8ILNOQUuqHE4iml505ObbjKAzWOPLAqdBXz5LJzJtNKzrmQgkF6QHqhxowCHICBAQCGsO0wGErL
+        2QAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="barButtonItem1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAl1JREFUWEft

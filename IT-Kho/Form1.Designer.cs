@@ -134,6 +134,7 @@
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(127, 82);
             this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Tổng Xuất Kho";
@@ -159,9 +160,9 @@
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement4,
-            this.accordionControlElement1,
             this.accordionControlElement5,
-            this.accordionControlElement8});
+            this.accordionControlElement8,
+            this.accordionControlElement1});
             this.accordionControl1.Location = new System.Drawing.Point(0, 31);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(2);
             this.accordionControl1.Name = "accordionControl1";
