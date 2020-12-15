@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IT_Kho
 {
-    public partial class Nhanh1 : DevExpress.XtraEditors.XtraUserControl
+    public partial class XtraUserControl5 : DevExpress.XtraEditors.XtraUserControl
     {
-        public Nhanh1()
+        public XtraUserControl5()
         {
             InitializeComponent();
         }

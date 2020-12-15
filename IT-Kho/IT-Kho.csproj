@@ -73,12 +73,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nhanh1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Nhanh1.Designer.cs">
-      <DependentUpon>Nhanh1.cs</DependentUpon>
-    </Compile>
     <Compile Include="NVTCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +141,12 @@
     <Compile Include="XtraUserControl4.Designer.cs">
       <DependentUpon>XtraUserControl4.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraUserControl5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControl5.Designer.cs">
+      <DependentUpon>XtraUserControl5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -158,9 +158,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Nhanh1.resx">
-      <DependentUpon>Nhanh1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVTCC.resx">
       <DependentUpon>NVTCC.cs</DependentUpon>
@@ -204,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraUserControl4.resx">
       <DependentUpon>XtraUserControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControl5.resx">
+      <DependentUpon>XtraUserControl5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
