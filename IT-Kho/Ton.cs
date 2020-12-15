@@ -23,9 +23,10 @@ namespace IT_Kho
 
         private void Ton_Load(object sender, EventArgs e)
         {
-            Loaddata();
+            hien();
         }
-        private void Loaddata()
+        //Hiện thị data lên gridcontrol
+        private void hien()
         {
             try
             {
@@ -44,6 +45,7 @@ namespace IT_Kho
                 XtraMessageBox.Show("Không thể kết nối tới CSDL");
             }
         }
+        //CHuyển hướng sang trang  Tồn kho
         private static Ton _instance;
 
         public static Ton Instance

@@ -20,6 +20,7 @@ namespace IT_Kho
         {
             InitializeComponent();
         }
+        //chuyển sang trang tài khoản
         private static Taikhoan _instance;
 
         public static Taikhoan Instance
@@ -31,6 +32,7 @@ namespace IT_Kho
                 return _instance;
             }
         }
+        //Hiển thị dữ liệu lên gridcontrol
         private void hien()
         {
             try
@@ -53,6 +55,7 @@ namespace IT_Kho
 
         private void Taikhoan_Load(object sender, EventArgs e)
         {
+            //load dữ liệu lên Usercontrl
             hien();
         }
 

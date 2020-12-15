@@ -153,6 +153,12 @@
     <Compile Include="XtraUserControl4.Designer.cs">
       <DependentUpon>XtraUserControl4.cs</DependentUpon>
     </Compile>
+    <Compile Include="XtraUserControl6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="XtraUserControl6.Designer.cs">
+      <DependentUpon>XtraUserControl6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraUserControl4.resx">
       <DependentUpon>XtraUserControl4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraUserControl6.resx">
+      <DependentUpon>XtraUserControl6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
