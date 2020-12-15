@@ -123,12 +123,21 @@
     <Compile Include="XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="BBC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BBC.Designer.cs">
+      <DependentUpon>BBC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Xuatkho.Designer.cs">
       <DependentUpon>Xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BBC.resx">
+      <DependentUpon>BBC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fix_Update.resx">
       <DependentUpon>Fix_Update.cs</DependentUpon>
     </EmbeddedResource>
