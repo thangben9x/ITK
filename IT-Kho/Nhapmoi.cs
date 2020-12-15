@@ -54,6 +54,7 @@ namespace IT_Kho
         private void Nhapmoi_Load(object sender, EventArgs e)
         {
             hien();
+            //code chọn người nhập trong table. cột người nhập
             string sql1 = "select *from NhanVien";
             repositoryItemLookUpEdit1.DataSource = Connect.getTable(sql1);
             repositoryItemLookUpEdit1.ValueMember = "manv";
