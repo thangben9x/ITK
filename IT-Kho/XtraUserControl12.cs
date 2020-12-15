@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IT_Kho
 {
-    public partial class BBC : DevExpress.XtraEditors.XtraUserControl
+    public partial class XtraUserControl12 : DevExpress.XtraEditors.XtraUserControl
     {
-        public BBC()
+        public XtraUserControl12()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace IT_Kho
 {
-    partial class BBC
+    partial class XtraUserControl12
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,31 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.SuspendLayout();
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(498, 273);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(63, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "labelControl1";
-            // 
-            // BBC
+            // XtraUserControl12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.labelControl1);
-            this.Name = "BBC";
-            this.Size = new System.Drawing.Size(1104, 561);
+            this.Name = "XtraUserControl12";
+            this.Size = new System.Drawing.Size(893, 484);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
