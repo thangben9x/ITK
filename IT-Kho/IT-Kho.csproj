@@ -123,12 +123,6 @@
     <Compile Include="XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraUserControl12.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XtraUserControl12.Designer.cs">
-      <DependentUpon>XtraUserControl12.cs</DependentUpon>
-    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,9 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl12.resx">
-      <DependentUpon>XtraUserControl12.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
