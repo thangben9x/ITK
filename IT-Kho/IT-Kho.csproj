@@ -73,6 +73,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="msc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="msc.Designer.cs">
+      <DependentUpon>msc.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVTCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,12 @@
     <Compile Include="VatTu.Designer.cs">
       <DependentUpon>VatTu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Xtr.Designer.cs">
+      <DependentUpon>Xtr.cs</DependentUpon>
+    </Compile>
     <Compile Include="XtraForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="msc.resx">
+      <DependentUpon>msc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NVTCC.resx">
       <DependentUpon>NVTCC.cs</DependentUpon>
@@ -177,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VatTu.resx">
       <DependentUpon>VatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xtr.resx">
+      <DependentUpon>Xtr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
