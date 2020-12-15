@@ -220,9 +220,6 @@
     <EmbeddedResource Include="XtraUserControl4.resx">
       <DependentUpon>XtraUserControl4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl6.resx">
-      <DependentUpon>XtraUserControl6.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
     </EmbeddedResource>
