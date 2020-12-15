@@ -131,7 +131,7 @@ namespace IT_Kho
                 }
             }
         }
-
+        //code chức năng xóa
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
