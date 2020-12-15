@@ -11,9 +11,9 @@ using DevExpress.XtraEditors;
 
 namespace IT_Kho
 {
-    public partial class XtraUserControl6 : DevExpress.XtraEditors.XtraUserControl
+    public partial class KMS : DevExpress.XtraEditors.XtraUserControl
     {
-        public XtraUserControl6()
+        public KMS()
         {
             InitializeComponent();
         }

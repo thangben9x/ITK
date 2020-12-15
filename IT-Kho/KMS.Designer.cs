@@ -1,6 +1,6 @@
 ﻿namespace IT_Kho
 {
-    partial class XtraUserControl6
+    partial class KMS
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // KMS
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "KMS";
+            this.Size = new System.Drawing.Size(1057, 488);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

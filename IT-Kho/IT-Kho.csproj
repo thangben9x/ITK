@@ -73,6 +73,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="KMS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KMS.Designer.cs">
+      <DependentUpon>KMS.cs</DependentUpon>
+    </Compile>
     <Compile Include="msc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,12 +159,6 @@
     <Compile Include="XtraUserControl4.Designer.cs">
       <DependentUpon>XtraUserControl4.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraUserControl6.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XtraUserControl6.Designer.cs">
-      <DependentUpon>XtraUserControl6.cs</DependentUpon>
-    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KMS.resx">
+      <DependentUpon>KMS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="msc.resx">
       <DependentUpon>msc.cs</DependentUpon>
