@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="B1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="B1.Designer.cs">
+      <DependentUpon>B1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connect.cs" />
     <Compile Include="Fix_Update.cs">
       <SubType>UserControl</SubType>
@@ -141,36 +147,15 @@
     <Compile Include="XtraForm1.Designer.cs">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="XtraUserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XtraUserControl1.Designer.cs">
-      <DependentUpon>XtraUserControl1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraUserControl3.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XtraUserControl3.Designer.cs">
-      <DependentUpon>XtraUserControl3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraUserControl4.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XtraUserControl4.Designer.cs">
-      <DependentUpon>XtraUserControl4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="XtraUserControl5.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="XtraUserControl5.Designer.cs">
-      <DependentUpon>XtraUserControl5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Xuatkho.Designer.cs">
       <DependentUpon>Xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="B1.resx">
+      <DependentUpon>B1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fix_Update.resx">
       <DependentUpon>Fix_Update.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,18 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl1.resx">
-      <DependentUpon>XtraUserControl1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl3.resx">
-      <DependentUpon>XtraUserControl3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl4.resx">
-      <DependentUpon>XtraUserControl4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="XtraUserControl5.resx">
-      <DependentUpon>XtraUserControl5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
