@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="B1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="B1.Designer.cs">
+      <DependentUpon>B1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connect.cs" />
     <Compile Include="Fix_Update.cs">
       <SubType>UserControl</SubType>
@@ -129,6 +135,9 @@
     <Compile Include="Xuatkho.Designer.cs">
       <DependentUpon>Xuatkho.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="B1.resx">
+      <DependentUpon>B1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Fix_Update.resx">
       <DependentUpon>Fix_Update.cs</DependentUpon>
     </EmbeddedResource>
